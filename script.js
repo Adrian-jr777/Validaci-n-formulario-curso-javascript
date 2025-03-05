@@ -18,11 +18,11 @@ const submitFunction = (event) => {
     }
 }
 
-document.getElementById('formulario').addEventListener('submit', submitFunction) // escucha el envío del formulario
+document.getElementById('formulario').addEventListener('submit', submitFunction)
 
 function validarFormulario() {
 
-    // Esto valida los campos de texto
+
     const camposTexto = document.querySelectorAll('input[type="text"]');
     let validacionCorrecta = true;
 
@@ -39,17 +39,17 @@ function validarFormulario() {
         }
     })
 
-    //esto valida el campo email
+    
     const email = document.getElementById('email');
     let errorEmail = document.getElementById('errorEmail')
 
-    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { // este regex valida que el formato del email se válido
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { 
         ocultarError(errorEmail)
     } else {
         mostrarError(errorEmail, '¡Ingrese un correo electrónico válido!')
     }
 
-    // Validación de edad
+    
 
     const edad = document.getElementById('edad');
     const errorEdad = document.getElementById('errorEdad')
@@ -62,7 +62,7 @@ function validarFormulario() {
     }
 
 
-    // Validación de la actividad
+    
 
     const actividad = document.getElementById('actividad')
     const errorActividad = document.getElementById('errorActividad')
@@ -74,7 +74,7 @@ function validarFormulario() {
         ocultarError(errorActividad)
     }
 
-    // Validación de nivel de estudio
+    
     const nivelEstudio = document.getElementById('nivelEstudio')
     const errorNivelEstudio = document.getElementById('errorNivelEstudio')
 
@@ -85,7 +85,7 @@ function validarFormulario() {
         ocultarError(errorNivelEstudio)
     }
 
-    // Validar los términos y condiciones
+    
 
     const aceptoTerminos = document.getElementById('aceptoTerminos')
     const errorAceptoTerminos = document.getElementById('errorAceptoTerminos')
@@ -97,7 +97,7 @@ function validarFormulario() {
         ocultarError(errorAceptoTerminos)
     }
 
-    return validacionCorrecta // esto dirá si el formulario completo es o no válido
+    return validacionCorrecta 
 
 }
 
